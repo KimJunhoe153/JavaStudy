@@ -11,6 +11,10 @@ public class Q1 {
             입력값이 0이면 "0" 출력
             입력값이 -10이면 "음수" 출력 * */
         Scanner sc = new Scanner(System.in);
+        System.out.print("수를 입력하세요 : ");
         int num = sc.nextInt();
+        String number = (num > 0) ? "양수" : (num < 0) ? "음수" : "0";
+        System.out.println(number);
+
     }
 }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Q2 {
 
-    public static void main(String[] args) {
+    public static int main(String[] args) {
         // 화씨온도(F)는 섭씨(C)로 섭씨 온도는 화씨로 변경시키는 코드를 완성하시오
         // 유저의 인풋을 두번 받아 처음에는 변경하고자 하는 방식을 선택하고 (1 또는 2)
         // 두번째에는 변경하고자 하는 온도를 입력받음(double 타입)
@@ -17,11 +17,24 @@ public class Q2 {
             2를 선택하고 37.8을 입력시 "섭씨 37.8도는 화씨 100도" 를 출력
         * */
         Scanner sc = new Scanner(System.in);
-        System.out.println("화씨를 섭씨로 바꾸려면 1, 섭씨를 화씨로 바꾸려면 2를 선택 : ");
+        System.out.print("화씨를 섭씨로 바꾸려면 1, 섭씨를 화씨로 바꾸려면 2를 선택 : ");
         int input = sc.nextInt();
-        System.out.println("온도를 입력하시오 : ");
-        double temp = sc.nextDouble();
+        if (input == 1) {
+            System.out.print("온도를 입력하시오 : ");
+            int tmepF = sc.nextInt();
+            System.out.println("화씨 " + tmepF + "도는 섭씨" + tmepC + "도 입니다.");
+        } else if (input == 2) {
+            System.out.print("온도를 입력하시오 : ");
+            double tempC = sc.nextDouble();
+//            System.out.println("섭씨 " + tmepC + "도는 화씨" + tmepF + "도 입니다.");
+        } else {
+            System.out.print("다시 입력하세요.");
+        }
+
         double result;
+        public static int tmepF (int fahrenheir) {
+            return 5 * (tmepF - 32) / 9;
+        }
 
 
     }

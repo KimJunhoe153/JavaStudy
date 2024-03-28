@@ -16,7 +16,12 @@ package HomeWork.HW20240327;
     3반 27번 영철 : 평균 86점
 */
 class Student {
-
+    String name;
+    int ban;
+    int no;
+    int kor;
+    int eng;
+    int math;
 }
 
 public class Q3 {
