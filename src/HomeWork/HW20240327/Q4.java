@@ -18,6 +18,7 @@ public class Q4 {
         다시 유저가 60을 입력하면, "맞췄습니다" 출력
         "시도횟수는 3번입니다" 출력하고 종료
     */
+
     public static void main(String[] args) {
         // 1~100사이의 임의의 값을 얻어서 answer에 저장한다.
         int answer = (int) (Math.random() * 100) + 1;
