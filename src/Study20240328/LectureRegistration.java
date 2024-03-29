@@ -1,23 +1,23 @@
-package Study20240328.EduEntity;
+package Study20240328;
 
 public class LectureRegistration {
-    String userId;
+    String loginId;
     int lectureId;
 
     public LectureRegistration() {
     }
 
     public LectureRegistration(String userId, int lectureId) {
-        this.userId = userId;
+        this.loginId = loginId;
         this.lectureId = lectureId;
     }
 
-    public String getUserId() {
-        return userId;
+    public String loginId() {
+        return loginId;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void getLoginId(String loginId) {
+        this.loginId = loginId;
     }
 
     public int getLectureId() {

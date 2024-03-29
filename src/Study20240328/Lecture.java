@@ -1,21 +1,13 @@
-package Study20240328.EduEntity;
+package Study20240328;
 
 public class Lecture {
-    int lectureId;
-    String title;
-    int duration;
-    String category;
-    String difficulty;
+    private int lectureId;
+    private String title;
+    private int duration;
+    private String category;
+    private String difficulty;
 
     public Lecture() {
-    }
-
-    public Lecture(int lectureId, String title, int duration, String category, String difficulty) {
-        this.lectureId = lectureId;
-        this.title = title;
-        this.duration = duration;
-        this.category = category;
-        this.difficulty = difficulty;
     }
 
     public int getLectureId() {
@@ -42,7 +34,17 @@ public class Lecture {
         this.duration = duration;
     }
 
-    public String getCategory() { return category; }
+    public String getCategory() {
+        return category;
+    }
+
+    public Lecture(int lectureId, String title, int duration, String category, String difficulty) {
+        this.lectureId = lectureId;
+        this.title = title;
+        this.duration = duration;
+        this.category = category;
+        this.difficulty = difficulty;
+    }
 
     public void setCategory(String category) {
         this.category = category;

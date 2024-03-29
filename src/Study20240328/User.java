@@ -1,4 +1,4 @@
-package Study20240328.EduEntity;
+package Study20240328;
 
 import java.time.LocalDate;
 
