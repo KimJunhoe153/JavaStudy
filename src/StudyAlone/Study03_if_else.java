@@ -13,6 +13,7 @@ public class Study03_if_else {
         if (!x) {
             System.out.println("?");
         }
+
         // if ~ else
         if (x) {
             System.out.println("x는 true");
@@ -25,6 +26,7 @@ public class Study03_if_else {
         boolean a = false;
         boolean b = true;
         boolean c = true;
+
         if (a) {
             System.out.println("a가 ture");
         } else if (b) {
