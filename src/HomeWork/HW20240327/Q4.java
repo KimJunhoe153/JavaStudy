@@ -41,6 +41,5 @@ public class Q4 {
             // 여기 코드를 작성
         } while (true); // 무한반복문
         System.out.println("시도횟수는 " + count + "번 입니다 :)");
-
     }
 }
