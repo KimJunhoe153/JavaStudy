@@ -1,7 +1,7 @@
 package Study20240328;
 
 public class Review {
-    private String reviewId;
+    private int reviewId;
     private int rating;
     private String text;
     private String loginId;
@@ -10,8 +10,7 @@ public class Review {
     public Review() {
     }
 
-    public Review(String reviewId, int rating, String text,
-                  String loginId, int lectureId) {
+    public Review(int reviewId, int rating, String text, String loginId, int lectureId) {
         this.reviewId = reviewId;
         this.rating = rating;
         this.text = text;
@@ -19,11 +18,11 @@ public class Review {
         this.lectureId = lectureId;
     }
 
-    public String getReviewId() {
+    public int getReviewId() {
         return reviewId;
     }
 
-    public void setReviewId(String reviewId) {
+    public void setReviewId(int reviewId) {
         this.reviewId = reviewId;
     }
 
@@ -59,5 +58,9 @@ public class Review {
         this.lectureId = lectureId;
     }
 
-
+    @Override
+    public String toString() {
+        return "(" + reviewId + ": " + rating + ": " + text
+                + ": " + loginId + ": " + lectureId + ")";
+    }
 }

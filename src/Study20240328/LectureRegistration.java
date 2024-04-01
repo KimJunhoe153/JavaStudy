@@ -7,17 +7,17 @@ public class LectureRegistration {
     public LectureRegistration() {
     }
 
-    public LectureRegistration(String userId, int lectureId) {
+    public LectureRegistration(String loginId, int lectureId) {
         this.loginId = loginId;
         this.lectureId = lectureId;
     }
 
-    public String loginId() {
+    public String getLoginId() {
         return loginId;
     }
 
-    public void getLoginId(String loginId) {
-        this.loginId = loginId;
+    public void setUserId(String userId) {
+        this.loginId = userId;
     }
 
     public int getLectureId() {

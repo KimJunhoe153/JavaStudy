@@ -1,13 +1,21 @@
 package Study20240328;
 
 public class Lecture {
-    private int lectureId;
-    private String title;
-    private int duration;
-    private String category;
-    private String difficulty;
+    int lectureId;
+    String title;
+    int duration;
+    LectureCatrgory category;
+    String difficulty;
 
     public Lecture() {
+    }
+
+    public Lecture(int lectureId, String title, int duration, LectureCatrgory category, String difficulty) {
+        this.lectureId = lectureId;
+        this.title = title;
+        this.duration = duration;
+        this.category = category;
+        this.difficulty = difficulty;
     }
 
     public int getLectureId() {
@@ -34,19 +42,11 @@ public class Lecture {
         this.duration = duration;
     }
 
-    public String getCategory() {
+    public LectureCatrgory getCategory() {
         return category;
     }
 
-    public Lecture(int lectureId, String title, int duration, String category, String difficulty) {
-        this.lectureId = lectureId;
-        this.title = title;
-        this.duration = duration;
-        this.category = category;
-        this.difficulty = difficulty;
-    }
-
-    public void setCategory(String category) {
+    public void setCategory(LectureCatrgory category) {
         this.category = category;
     }
 
@@ -60,6 +60,7 @@ public class Lecture {
 
     @Override
     public String toString() {
-        return lectureId + " / " + title + " / " + category + " / " + difficulty + " / " + duration + "분";
+        return lectureId + " / " + title + " / " + category
+                + " / " + difficulty + " / " + duration + "분";
     }
 }

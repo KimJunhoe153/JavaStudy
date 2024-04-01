@@ -20,5 +20,4 @@ package Study20240329.Review;
 // 예) createReview("tommy", 3, 5, "그저그럼") // tommy는 3번 강의를 수강 안하므로 False 리턴
 
 public class Review {
-
 }
