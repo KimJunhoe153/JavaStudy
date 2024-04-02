@@ -21,7 +21,10 @@ class D<T extends B> {
 
 }
 
-public class GenericExtends {
+public class
+
+
+    GenericExtends {
     public static void main(String[] args) {
 //        D<A> d1 = new D<A>(); // A클래스는 D의 Generic 범위 안에 없음
         D<B> d2 = new D<B>();

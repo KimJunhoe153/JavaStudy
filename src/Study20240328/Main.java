@@ -117,5 +117,11 @@ public class Main {
         reviews.add(new Review(reviews.size() + 1, rating, text, loginId, lectureId));
         System.out.println(reviews.toString());
         return true;
+
+//        FreeBoard freeBoard = new FreeBoard("Id", "Test",
+//                "Hello, World!", "LoginId");
+//
+//        FreeBoard.Reply reply1 = new FreeBoard.Reply("1L", "This is a reply.", "replyUser", "freeBoard");
+//        FreeBoard.Reply reply2 = new FreeBoard.Reply("2L", "Another reply.", "anotherUser", "freeBoard");
     }
 }

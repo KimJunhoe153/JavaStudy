@@ -28,9 +28,9 @@ public class Exam_617p {
         B b_in = new B();
 
 
-        mg1.set(b_in);
-        A a_out = mg1.get();
-        System.out.println(a_out); // 클래스 A 객체
+//        mg1.set(b_in);
+//        A a_out = mg1.get();
+//        System.out.println(a_out); // 클래스 A 객체
 
 
     }
