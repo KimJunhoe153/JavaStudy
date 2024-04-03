@@ -3,10 +3,12 @@ package Study20240328;
 import java.util.ArrayList;
 
 public class Main {
-    static ArrayList<User> users;
-    static ArrayList<Lecture> lectures;
-    static ArrayList<LectureRegistration> lectureRegistrations;
+    public static ArrayList<User> users;
+    public static ArrayList<Lecture> lectures;
+    public static ArrayList<LectureRegistration> lectureRegistrations;
     static ArrayList<Review> reviews;
+    static ArrayList<Teacher> teachers;
+    ;
 
     public static void main(String[] args) {
         // 정보 초기화
@@ -84,8 +86,8 @@ public class Main {
         }
     }
 
-    public static boolean createReview(String loginId, int lectureId
-            , int rating, String text) {
+
+    public static boolean createReview(String loginId, int lectureId, int rating, String text) {
         // 점수체크
         if (rating < 1 || rating > 10) {
             System.out.println("평가점수는 1~10점 사이입니다.");
@@ -94,8 +96,7 @@ public class Main {
         // 기존 리뷰 확인
         if (!reviews.isEmpty()) {
             for (Review review : reviews) {
-                if (review.getLoginId().equals(loginId)
-                        && review.getLectureId() == lectureId) {
+                if (review.getLoginId().equals(loginId) && review.getLectureId() == lectureId) {
                     System.out.println("이미 작성한 리뷰가 있습니다.");
                     return false;
                 }
@@ -104,8 +105,7 @@ public class Main {
         // 수강여부 확인
         boolean canReview = false;
         for (LectureRegistration registration : lectureRegistrations) {
-            if (registration.getLoginId().equals(loginId)
-                    && registration.getLectureId() == lectureId) {
+            if (registration.getLoginId().equals(loginId) && registration.getLectureId() == lectureId) {
                 canReview = true;
                 break;
             }
@@ -116,12 +116,7 @@ public class Main {
         }
         reviews.add(new Review(reviews.size() + 1, rating, text, loginId, lectureId));
         System.out.println(reviews.toString());
-        return true;
 
-//        FreeBoard freeBoard = new FreeBoard("Id", "Test",
-//                "Hello, World!", "LoginId");
-//
-//        FreeBoard.Reply reply1 = new FreeBoard.Reply("1L", "This is a reply.", "replyUser", "freeBoard");
-//        FreeBoard.Reply reply2 = new FreeBoard.Reply("2L", "Another reply.", "anotherUser", "freeBoard");
+        return true;
     }
 }

@@ -1,9 +1,9 @@
-package Study20240328;
+package Project;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FreeBoard {
+public class Freeborad {
     String id;
     String title;
     String content;
@@ -11,10 +11,11 @@ public class FreeBoard {
 
     static List<Reply> replies = new ArrayList<>();
 
-    public FreeBoard() {
+    public Freeborad() {
     }
 
-    public FreeBoard(String id, String title, String content, String loginId) {
+    public Freeborad(String id, String title,
+                     String content, String loginId) {
         this.id = id;
         this.title = title;
         this.content = content;
@@ -53,7 +54,11 @@ public class FreeBoard {
         this.loginId = loginId;
     }
 
-    public static void main(String[] args) {
-        System.out.println(replies);
+    public static List<Reply> getReplies() {
+        return replies;
+    }
+
+    public static void setReplies(List<Reply> replies) {
+        Freeborad.replies = replies;
     }
 }
