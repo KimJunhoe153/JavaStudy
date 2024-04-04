@@ -113,7 +113,10 @@ public class Q4 {
         List<MyCar> myCarList = new ArrayList<>();
 
         // 여기 코드 작성 !!
-
+        for (int i = 0; i < brands.length; i++) {
+            MyCar car = new MyCar(brands[i], models[i], years[i], colors[i]);
+            myCarList.add(car);
+        }
         return myCarList;
     }
 
@@ -121,7 +124,9 @@ public class Q4 {
         SimpleCarInfo[] cars = new SimpleCarInfo[carList.size()];
 
         // 여기 코드 작성 !!
+        for (int i = 0; i < carList.size(); i++) {
 
+        }
         return cars;
     }
 }

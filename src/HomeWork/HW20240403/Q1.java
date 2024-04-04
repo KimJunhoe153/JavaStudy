@@ -11,6 +11,18 @@ public class Q1 {
 
     public static String changeCase(String str) {
         // 여기 코드 작성 !!
-        return "";
+        char[] chars = str.toCharArray();
+
+        for (int i = 0; i < chars.length; i++) {
+            char a = chars[i];
+
+            if (Character.isLowerCase(a)) {
+                chars[i] = Character.toUpperCase(a);
+            } else if
+            (Character.isUpperCase(a)) {
+                chars[i] = Character.toLowerCase(a);
+            }
+        }
+        return new String(chars);
     }
 }
