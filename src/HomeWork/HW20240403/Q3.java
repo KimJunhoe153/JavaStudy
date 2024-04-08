@@ -13,7 +13,17 @@ public class Q3 {
 
         // 여기 코드 작성 !!
         Scanner scanner = new Scanner(System.in);
+
         System.out.print("문자열 5개를 입력하세요 : ");
-        String str = scanner.next();
+
+        Set<String> stringSet = new HashSet<>();
+        for (int i = 0; i < 5; i++) {
+            String str = scanner.next();
+            stringSet.add(str);
+        }
+
+        for (String str : stringSet) {
+            System.out.println(str);
+        }
     }
 }

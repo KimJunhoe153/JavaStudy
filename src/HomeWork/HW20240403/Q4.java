@@ -99,12 +99,9 @@ public class Q4 {
         int[] years = {2012, 1999, 2024, 2021};
         String[] colors = {"White", "Green", "Grey", "Black"};
 
-        // 위의 정보를 이용하여 List<MyCar>자료형의 컬렉션을 리턴하는 메서드(makeList)를 정의하시오
         List<MyCar> carList = makeList(brands, models, years, colors);
         carList.stream().forEach(System.out::println);
 
-        // 위에서 만든 List<MyCar>자료형의 컬렉션에서 필요한 정보만 사용하여
-        // SimpleCarInfo[] 배열을 리턴하는 메서드(sendCarInfo)를 정의하시오
         SimpleCarInfo[] carArray = sendCarInfo(carList);
         System.out.println(Arrays.toString(carArray));
     }
@@ -112,6 +109,7 @@ public class Q4 {
     public static List<MyCar> makeList(String[] brands, String[] models, int[] years, String[] colors) {
         List<MyCar> myCarList = new ArrayList<>();
 
+        // 위의 정보를 이용하여 List<MyCar>자료형의 컬렉션을 리턴하는 메서드(makeList)를 정의하시오
         // 여기 코드 작성 !!
         for (int i = 0; i < brands.length; i++) {
             MyCar car = new MyCar(brands[i], models[i], years[i], colors[i]);
@@ -123,9 +121,13 @@ public class Q4 {
     public static SimpleCarInfo[] sendCarInfo(List<MyCar> carList) {
         SimpleCarInfo[] cars = new SimpleCarInfo[carList.size()];
 
+        // 위에서 만든 List<MyCar>자료형의 컬렉션에서 필요한 정보만 사용하여
+        // SimpleCarInfo[] 배열을 리턴하는 메서드(sendCarInfo)를 정의하시오
         // 여기 코드 작성 !!
         for (int i = 0; i < carList.size(); i++) {
-
+            MyCar mc = carList.get(i);
+            SimpleCarInfo sci = new SimpleCarInfo(mc.model, mc.color);
+            cars[i] = sci;
         }
         return cars;
     }
