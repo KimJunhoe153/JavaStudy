@@ -1,4 +1,5 @@
 use testdb;
+
 -- count 데이터 열의 갯수를 세는 함수(null은 제외)
 select
 	count(*),
@@ -30,7 +31,7 @@ from
 	고객
 group by
 	도시;
--- 
+
 select
 	담당자직위,
 	도시,
@@ -55,7 +56,7 @@ from
 group by
 	도시
 	having count(*) >= 4;
--- 
+
 select
 도시,
 	sum(마일리지)
